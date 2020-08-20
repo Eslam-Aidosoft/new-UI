@@ -711,7 +711,7 @@ footer span {
     height: 57px;
     width: 50px;
     left: -59px;
-    background: linear-gradient(-90deg, rgb(255 255 255) 0%, rgba(247, 254, 255, 0) 120%);
+    background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(247, 254, 255, 0) 120%);
 }
 
 .pages-tabs-arrow.swiper-button-next:before {
@@ -720,7 +720,7 @@ footer span {
     height: 57px;
     width: 50px;
     right: -59px;
-    background: linear-gradient(90deg, rgb(255 255 255) 0%, rgba(247, 254, 255, 0) 120%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247, 254, 255, 0) 120%);
 }
 
 
@@ -806,7 +806,7 @@ footer span {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(255 255 255 / 0.2);
+    background: rgba(255,255,255,0.2);
     border-radius: 20px;
     bottom: 20px;
     top: auto;
@@ -830,7 +830,7 @@ footer span {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: rgb(255 255 255 / 0.2);
+    background: rgba(255,255,255,0.2);
     width: 30px;
     height: 30px;
     display: flex;
@@ -1217,45 +1217,34 @@ aside.aside-event #calendar-aside {
 /* search result */
 
 .search-cat-title {
-
-display: flex;
-
-align-items: center;
-
-color: rgba(var(--main-color), 1);
-
-font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: rgba(var(--main-color), 1);
+    font-weight: bold;
 }
 
-.search-cat-title svg{
-    
-width: 18px;
-    
-height: 18px;
+.search-cat-title svg {
+    width: 18px;
+    height: 18px;
 }
 
 .search-cat-title svg path {
-    
-fill: rgba(var(--main-color), 1);
+    fill: rgba(var(--main-color), 1);
+}
+
+.search-cat-title .name {
+    margin: 0 5px;
 }
 
 .search-cat-title .num {
-    
-background: rgba(var(--main-color), 1);
-    
-color: #fff;
-    
-font-weight: normal;
-    
-font-size: 12px;
-    
-display: inline-block;
-    
-border-radius: 50px;
-    
-padding: 0px 10px;
-    
-margin: 0 3px;
+    background: rgba(var(--main-color), 1);
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 0px 10px;
+    margin: 0 5px;
 }
 
 
@@ -1264,8 +1253,134 @@ margin: 0 3px;
 
 
 
+/* my table  */
+
+.my-table {
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.my-table thead {
+    background: #F9F9F9;
+}
+
+.my-table thead tr th {
+    text-align: center;
+    padding: 15px 5px;
+    color: #8F9198;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.my-table thead tr th:hover {
+    color: rgba(var(--main-color), 1);
+}
+
+.my-table thead tr th a.show-all {
+    color: rgba(var(--main-color), 1);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.my-table thead tr th .btn-sort-table {
+    cursor: pointer;
+    background: #fcfcfc;
+    width: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0 1px;
+    transition: 0.3s ease;
+}
+
+.my-table thead tr th .btn-sort-table svg {
+    width: 10px;
+    height: 10px;
+}
+
+.my-table thead tr th .btn-sort-table path {
+    fill: #000;
+    stroke: #131313;
+    transition: 0.3s ease;
+    stroke-width: 1px;
+}
+
+.my-table thead tr th:hover .btn-sort-table {
+    background: rgba(var(--main-color), 1);
+}
+
+.my-table thead tr th:hover .btn-sort-table path {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2px;
+}
 
 
+.my-table tbody tr {
+    transition: 0.3s ease;
+}
+
+.my-table tbody tr:hover {
+    background: rgba(var(--main-color), 0.1);
+}
+
+.my-table tbody tr td {
+    padding: 20px 5px;
+    font-weight: bold;
+    color: #484848;
+    transition: 0.3s ease;
+}
+
+.my-table tbody tr:hover td {
+    color: rgba(var(--main-color), 1);
+}
+
+
+.my-table tbody tr td a {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.my-table tbody tr td a.tr-edit svg path {
+    fill: #bcbcbc;
+    transition: 0.3s ease;
+}
+
+.my-table tbody tr td a.tr-remove {
+    border-radius: 50px;
+    background: #bcbcbc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.my-table tbody tr:hover td a.tr-edit svg path {
+    fill: rgba(var(--main-color), 1);
+}
+
+.my-table tbody tr:hover td a.tr-remove {
+    background: rgba(var(--main-color), 1);
+}
+
+
+.my-table tbody tr td a.tr-remove svg {
+    width: 11px;
+    height: 11px;
+}
+
+.my-table .tr-btn-holder {
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -1343,3 +1458,5 @@ margin: 0 3px;
         top: 70px;
     }
 }
+
+a
