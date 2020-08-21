@@ -149,8 +149,8 @@ nav.main-nav .nav-search-holder .nav-search-input .btn-search:hover path {
     /* display: none; */
     max-height: 0;
     transition: 0.3s ease;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling:touch;
+    /* overflow-y: scroll;
+    -webkit-overflow-scrolling:touch; */
 }
 
 
