@@ -812,6 +812,7 @@ footer span {
     border-radius: 20px;
     bottom: 20px;
     top: auto;
+    outline: none;
 }
 
 .main-slider-arrow svg {}
